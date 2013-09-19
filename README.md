@@ -40,7 +40,7 @@ You can optionally specify your own key, if you don't want to use `ssh-keyscan`:
 
 ```ruby
 ssh_known_hosts_entry 'github.com' do
-  key_rsa '...'
+  key '...'
 end
 ```
 
@@ -64,16 +64,16 @@ end
       <td></td>
     </tr>
     <tr>
-      <td>key_rsa</td>
-      <td>(optional) provide your own rsa key</td>
-      <td><tt>ABAAC3...</tt></td>
-      <td>key_dsa</td>
-      <td>(optional) provide your own dsa key</td>
-      <td><tt>ABAAC3...</tt></td>
+      <td>key</td>
+      <td>(optional) provide your own key</td>
+      <td><tt>ssh-rsa ABAAC3...</tt></td>
+      <td><tt>ssh-keyscan -H #{host}</tt></td>
+    </tr>
+    <tr>
       <td>host_array</td>
       <td>(optional) pass an array of fqdn, ip, etc</td>
       <td><tt>['example.com','192.168.0.1','example']</tt></td>
-      <td><tt>ssh-keyscan -H #{host}</tt></td>
+      <td></td>
     </tr>
   </tbody>
 </table>
